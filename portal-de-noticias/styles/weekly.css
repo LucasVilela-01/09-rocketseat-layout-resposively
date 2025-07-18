@@ -1,0 +1,61 @@
+.weekly {
+
+    & p {
+      margin-right: auto;
+    }
+
+    & a {
+      gap: 0.25rem;
+      display: flex;
+      align-items: center;
+
+      & span {
+        line-height: 1.4;
+      }
+    }
+
+    & > div:nth-child(1) {
+      margin-bottom: 1.5rem;
+    }
+
+    & > div:nth-child(2) {
+     flex-direction: column;
+
+      & .card {
+      &::before {
+        background: none;
+        height: fit-content;
+      }
+
+      & figcaption {
+        top: 0;
+        padding: 0.5rem;
+        height: fit-content;
+      }
+
+      & h2 {
+        font-size: var(--fs-base);
+        height: 4.125rem;
+      }
+    }
+  }
+}
+
+@media (width >= 80em) {
+  .weekly {
+
+    & > div:nth-child(2) {
+      flex-direction: row;
+      gap: 1rem;
+
+      & .card {
+        width: 18.25rem;
+        height: 14.625rem;
+
+        & img {
+          height: 10rem;
+        }
+      }
+    }
+  }
+}

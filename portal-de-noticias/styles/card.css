@@ -1,0 +1,61 @@
+.card {
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+
+    & img {
+      width: 100%;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      top: 50%;
+      background: linear-gradient(180deg, transparent 0%, #020617 100%);
+    }
+
+    & figcaption {
+      position: absolute;
+      bottom: 0;
+
+      padding: 0.75rem;
+    }
+
+    & h1, h2 {
+      height: 6rem;
+    }
+
+    & h2 {
+      margin-top: 0.5rem;
+      height: 3.75rem;
+      overflow: hidden;
+    }
+  }
+
+ .first-card {
+  height: 26rem;
+
+  & img {
+    height: 100%;
+  }
+ }
+
+@media (width >= 80em) {
+  #highlights {
+    flex-direction: column;
+
+    & .card-main {
+      width: 38rem;
+      & figcaption {
+        padding: 1.5rem;
+      }
+    }
+
+    & .first-card {
+    height: 100%;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+#about {
+  flex-direction: column;
+
+  & p {
+    line-height: 1.7;
+    font-size: var(--fs-md);
+    margin-bottom: 1rem;
+  }
+
+  & .profile {
+    height: 7.5rem;
+    width: 7.5rem;
+    margin-bottom: 1rem;
+  }
+
+  & .description {
+
+    & h1 {
+      margin-bottom: 0.5rem;
+    }
+
+  }
+
+  & .info {
+    flex-direction: column;
+
+    & p {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  }
+}
+
+@media (width >= 80em) {
+  #about {
+    flex-direction: row;
+    align-items: center;
+
+    & .profile {
+      height: 11rem;
+      width: 11rem;
+      margin-bottom: 0;
+      margin-right: 2rem;
+    }
+
+    & .description {
+      width: 24rem;
+      margin-right: 19.5rem;
+
+      & p {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
